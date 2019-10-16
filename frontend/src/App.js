@@ -1,33 +1,16 @@
 import React from 'react';
-//import api from './services/api';
 import './App.css';
 
 import logo from './assets/logo.svg'
+import Routes from './routes'
 
 function App() {
-  function handleSubmit(event){
-    event.preventDefault();
-
-    console.log('hell word')
-  }
-
-  return (
+    return (
     <div className="container">
       <img src={logo} alt="AirCnc" />
 
       <div className="content">
-        <p>
-          Ofereça <strong>spots</strong> para programadores e encontre <strong>talentos</strong> para sua empresa
-        </p>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">E-mail *</label>
-          <input 
-            type="email" 
-            id="email" 
-            placeholder="Seu melhor e-mail"
-          />
-          <button type="submit" className="btn">Entrar</button>
-        </form>
+        <Routes />
       </div>
     </div>
   );
